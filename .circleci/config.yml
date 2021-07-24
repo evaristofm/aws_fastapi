@@ -46,7 +46,7 @@ jobs:
           command: aws s3 cp function.zip s3://medium-aws2/function.zip
       - run:
           name: Deploy new Lambda
-          command: aws lambda update-function-code --function-name medium-demo --zip-file function.zip --s3-bucket medium-aws2 --s3-key function.zip
+          command: aws lambda update-function-code --function-name medium-demo --zip-file fileb://function.zip
 
 
 workflows:
