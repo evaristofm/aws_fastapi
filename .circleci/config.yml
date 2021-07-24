@@ -43,10 +43,10 @@ jobs:
           aws-secret-access-key: AWS_SECRET_ACCESS_KEY
       - run:
           name: Upload to S3
-          command: aws s3 cp function.zip s3://serverless-fastapi2/function.zip
+          command: aws s3 cp function.zip s3://medium-aws2/function.zip
       - run:
           name: Deploy new Lambda
-          command: aws lambda update-function-code --function-name serverless-fastapi-lambda --s3-bucket serverless-fastapi2 --s3-key function.zip
+          command: aws lambda update-function-code --function-name medium-demo --s3-bucket medium-aws2 --s3-key function.zip
 
 
 workflows:
